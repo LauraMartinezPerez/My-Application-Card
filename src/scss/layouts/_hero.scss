@@ -1,0 +1,15 @@
+@use "../core/variables" as vars;
+.heroClass {
+    background-color: vars.$main_blue;
+    color: vars.$white;
+    font-family: vars.$font-main;
+}
+
+.title {
+  font-family: vars.$font-title;
+}
+
+.fa-brands {
+  color: vars.$main_blue;
+  font-size: 40px;
+}
