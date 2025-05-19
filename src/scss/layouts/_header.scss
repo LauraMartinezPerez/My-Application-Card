@@ -1,2 +1,20 @@
 @use "../core/variables" as vars;
 
+.header {
+display: flex;
+padding-top: 20px;
+padding-left: 20px;
+
+   &__logo {
+    max-width: 50px;
+    object-fit: contain;
+   } 
+
+   &__logo-name {
+    color: vars.$white;
+    font-family: vars.$font-title;
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding-left: 20px;
+   }
+}

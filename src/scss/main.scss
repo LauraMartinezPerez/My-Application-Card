@@ -8,12 +8,15 @@
 @use "layouts/footer";
 
 
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+html {
+
   background: linear-gradient(to right, vars.$main_blue, #010e29);
+}
+
+body {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .page-wrapper {
@@ -21,3 +24,5 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
+
