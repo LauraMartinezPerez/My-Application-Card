@@ -1,15 +1,73 @@
 @use "../core/variables" as vars;
-.heroClass {
-    background-color: vars.$main_blue;
+
+.hero {
+  background: linear-gradient(to right, vars.$main_blue, #010e29);
+
+
+  &__logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+  }
+
+  &__landing-logo {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+  }
+  &__landing-logo-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: vars.$white;
-    font-family: vars.$font-main;
+    font-family: vars.$font-title;
+    font-size: 35px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    color: vars.$white;
+    font-family: vars.$font-title;
+    font-size: 35px;
+    gap: 25px;
+  }
+
+  &__options {
+    display: flex;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+
+
+  //version tablet-computer
+  @media (min-width: 768px) {
+
+  &__landing-logo {
+  max-width: 180px;
+  } 
+    
+  &__landing-logo-name {
+    font-size: 55px;
+  }
+  
+  &__text {
+    margin-top: 60px;
+    font-size: 45px;
+  }
+
+  &__options {
+    gap: 60px;
+    padding: 20px auto;
+  }
+
 }
 
-.title {
-  font-family: vars.$font-title;
-}
+};
 
-.fa-brands {
-  color: vars.$main_blue;
-  font-size: 40px;
-}

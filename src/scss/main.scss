@@ -6,3 +6,18 @@
 @use "layouts/preview";
 @use "layouts/card";
 @use "layouts/footer";
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, vars.$main_blue, #010e29);
+}
+
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

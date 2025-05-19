@@ -1,1 +1,26 @@
 @use "../core/variables" as vars;
+
+.footer {
+    color: vars.$white;
+    font-family: vars.$font-main;
+    font-size: 10px;
+   padding: 20px;
+
+&__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+
+  //version tablet-computer
+  @media (min-width: 768px) {
+
+  }
+
+};
+
+.footer-links {
+    color: vars.$orange;
+    text-decoration: underline;
+};
