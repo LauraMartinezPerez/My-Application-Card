@@ -1,1 +1,103 @@
 @use "../core/variables" as vars;
+
+.form-main {
+    background-color: vars.$light-grey;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    width: 90vw;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: vars.$font-main;
+    margin: 10px auto;
+    
+}
+
+
+//DESIGN FORM
+
+.form-design-container {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #ffffff;
+    padding: 10px;
+}
+
+.design-title {
+    color: vars.$main_blue;
+}
+
+.design-opt {
+    position: relative;
+display: flex;
+flex-direction: column;
+padding-right: 20px;
+font-size: 18px;
+}
+.color-opt {
+    align-items: center;  
+}
+.elige {
+    position: absolute;
+    margin-top: 8px;
+}
+.inputs {
+display: flex;
+justify-content: end;
+gap: 20px;
+
+}
+
+input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.opt-light-blue {
+    position: relative;
+    padding-left: 25px;
+    display: inline-block;
+    line-height: 20px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: vars.$secondary_blue;
+    cursor: pointer;
+}
+.opt-light-blue:hover {
+transform: scale(1.2);
+ box-shadow: 3px 3px 6px #a3b1c6, -3px -3px 6px #ffffff;
+
+}
+
+.opt-orange {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: vars.$orange;
+    cursor: pointer;
+}
+.opt-orange:hover {
+transform: scale(1.2);
+ box-shadow: 3px 3px 6px #a3b1c6, -3px -3px 6px #ffffff;
+
+}
+
+.opt-green {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: vars.$green;
+    cursor: pointer;
+}
+.opt-green:hover {
+transform: scale(1.2);
+ box-shadow: 3px 3px 6px #a3b1c6, -3px -3px 6px #ffffff;
+
+}
+
+
+
+//FILL FORM

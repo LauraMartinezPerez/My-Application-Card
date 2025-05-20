@@ -17,4 +17,15 @@ padding-left: 20px;
     letter-spacing: 3px;
     padding-left: 20px;
    }
+
+   //version tablet-computer  
+ @media (min-width: 768px) {
+        &__logo {
+            max-width: 70px;
+            object-fit: contain;
+        } 
+       &__logo-name {
+            font-size: 35px;
+        }
+    }
 }

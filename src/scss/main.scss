@@ -8,15 +8,16 @@
 @use "layouts/footer";
 
 
-html {
+/* html {
 
   background: linear-gradient(to right, vars.$main_blue, #010e29);
-}
+} */
 
 body {
   display: grid;
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
+   background: linear-gradient(to right, vars.$main_blue, #010e29);
 }
 
 .page-wrapper {
