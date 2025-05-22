@@ -16,7 +16,7 @@ form.form-main {
 
 /* .collapsed {
     display: none;
-} */
+}   */
 
 input[type="radio"] {
   opacity: 0;
@@ -25,11 +25,17 @@ input[type="radio"] {
 
 .title {
     color: vars.$main_blue;
-    height: 40px;
+    height: 30px;
     font-size: 20px;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    
 } 
+
+.fa-solid {
+    font-size: 20px;
+}
 
 .design {
     width: 100%;
@@ -153,20 +159,20 @@ input[type="radio"] {
             height: 58px;
             border-radius: 10px;
             font-size: 12px;
-            color: #6d7582;
+            color: vars.$dark-grey;
             box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
             margin-right: 20px;
         }
 
         &__photo-button {
-            background-color: #e0e5ec;
+            background-color: vars.$light-grey;
             border-radius: 10px;
             box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
             /* padding: 0px 10px; */
             width: 80px;
             padding: 10px;
             font-size: 15px;
-            color: #6d7582;
+            color: vars.$dark-grey;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -184,8 +190,13 @@ input[type="radio"] {
     height: 40px;
     font-size: 30px;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
     }  
+
+.fa-solid {
+    font-size: 30px;
+}
 
     .design {
     width: 100%;
@@ -269,7 +280,7 @@ input[type="radio"] {
 
 
 .design-pressed-color {
-box-shadow: inset 3px 3px 5px #a3b1c6, inset -3px -3px 5px #ffffff;
+box-shadow: inset 3px 3px 5px vars.$grey, inset -3px -3px 5px vars.$white;
 transform: scale(1.2); 
 }
 
@@ -280,7 +291,7 @@ transform: scale(1.2);
 .fill {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px #a3b1c6, -5px -5px 10px #ffffff;
+    box-shadow: 5px 5px 10px vars.$grey, -5px -5px 10px vars.$white;
     padding: 10px 10px;
     margin-top: 20px;
 
@@ -344,6 +355,61 @@ transform: scale(1.2);
     @media (min-width: 768px) {
 
     }
-   
+    @media (min-width: 1024px) {
+        
+    }
 }
 
+
+
+//SHARE FORM
+.share {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px vars.$grey, -5px -5px 10px vars.$white;
+    padding: 10px 10px;
+    margin-top: 20px;
+
+    &__fieldset {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__button {
+            background-color: vars.$light-grey;
+            border-radius: 10px;
+            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
+            /* padding: 0px 10px; */
+            width: 50%;
+            padding: 5px;
+            font-size: 18px;
+            color: vars.$dark-grey;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }    
+            &__button:active {
+                box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
+            }
+
+        &__section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__text {
+            font-family: vars.$font-title;
+            font-size: 20px;
+            color: vars.$main_blue;
+        }
+
+        &__link {
+            color: vars.$orange;
+        }
+
+}
