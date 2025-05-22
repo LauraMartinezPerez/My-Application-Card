@@ -46,12 +46,38 @@ input[type="radio"] {
         &__color-section {
         display: flex;
         justify-content: space-between;
+        border-radius: 10px;
+        padding-top: 20px;
+        font-size: 15px;
+        color: vars.$main_blue;
+        position: relative;
+        border: solid 2px transparent;
         }
+
+            &__color-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            margin-bottom: -2px;
+            background-color: transparent;
+            background-image: linear-gradient(
+                to left,
+                transparent,
+                vars.$grey 25%,
+                vars.$main_blue 50% ,
+                transparent
+                );
+            }
 
         &__text {
         font-size: 15px;
         color: vars.$main_blue;
     }
+
         &__inputs {
         display: flex;
         align-items: center;
@@ -93,9 +119,34 @@ input[type="radio"] {
             }
 
         &__photo-section {
-            display: flex;
-            justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        padding-top: 20px;
+        font-size: 15px;
+        color: vars.$main_blue;
+        position: relative;
+        border: solid 2px transparent;
         }
+
+            &__photo-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            margin-bottom: -2px;
+            background-color: transparent;
+            background-image: linear-gradient(
+                to left,
+                transparent,
+                vars.$grey 25%,
+                vars.$main_blue 50% ,
+                transparent
+                );
+            }
 
         &__photo {
             width: 58px;
@@ -104,14 +155,17 @@ input[type="radio"] {
             font-size: 12px;
             color: #6d7582;
             box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
+            margin-right: 20px;
         }
 
         &__photo-button {
             background-color: #e0e5ec;
-            border-radius: 20px;
+            border-radius: 10px;
             box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-            padding: 0px 10px;
-            font-size: 12px;
+            /* padding: 0px 10px; */
+            width: 80px;
+            padding: 10px;
+            font-size: 15px;
             color: #6d7582;
             border: none;
             cursor: pointer;
@@ -138,12 +192,6 @@ input[type="radio"] {
     border-radius: 10px;
     box-shadow: 10px 10px 20px vars.$grey, -10px -10px 20px vars.$white;
     padding: 10px 10px;
-
-        &__color-section {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 30px;
-        }
 
         &__text {
         font-size: 22px;
@@ -196,17 +244,19 @@ input[type="radio"] {
             padding-right: 30px;
         }
 
-        &__photo-button {
-            background-color: #e0e5ec;
-            border-radius: 20px;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-            padding: 0px 10px;
-            font-size: 18px;
+         &__photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
             color: #6d7582;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }    
+            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
+            margin-right: 30px;
+        }
+
+        &__photo-button {
+            width: 100px;
+            font-size: 20px;
+        }
             &__photo-button:active {
                 box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
             }
@@ -249,6 +299,7 @@ transform: scale(1.2);
         display: flex;
         align-items: center;
         gap: 1rem; 
+        text-transform: uppercase;
 
         &::after {
             content: '';
