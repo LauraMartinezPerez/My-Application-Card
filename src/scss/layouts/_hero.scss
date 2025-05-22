@@ -44,7 +44,7 @@
     padding: 20px 0;
   }
 
-  //version tablet-computer
+  //tablet-computer version
   @media (min-width: 768px) {
 
     &__landing-logo {
@@ -78,7 +78,7 @@
     border: 0;
     outline: none;
     background: none;
-    color: vars.$secondary_blue;
+    color: vars.$grey;
     text-transform: uppercase;
     font-family: vars.$font-title;
     font-size: 2rem;

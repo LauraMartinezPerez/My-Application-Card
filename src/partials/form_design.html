@@ -1,23 +1,25 @@
 
-<section class="form-design-container">
-    <div class="design-title">
-        <h2>Diseña</h2>
+<section class="design">
+    <div class="title">
+        <p>Diseña</p>
     </div>
     <div class="collapsed">
-        <fieldset class="design-opt"> 
-            <div class="color-opt">
-                <p class="elige">Elige un color</p>     
-                <div class="inputs">
-                    <label class="opt-light-blue" for="light-blue"></label>
-                    <input class="" id="light-blue" type="radio" value="light-blue" name="bg-color">
-                    <label class="opt-orange" for="orange"></label>
-                    <input class="" id="orange" type="radio" value="orange" name="bg-color">
-                    <label class="opt-green" for="green"></label>
-                    <input class="" id="green" type="radio" value="green" name="bg-color">
+        <fieldset class="design__fieldset"> 
+            <div class="design__color-section">
+                <p class="design__text">Elige un color</p> 
+                <div class="design__inputs">
+                    <label class="design__grey-color" for="grey"></label>
+                    <input class="js-grey-input" id="grey" type="radio" value="grey" name="bg-color">
+                    <label class="design__orange-color" for="orange"></label>
+                    <input class="js-orange-input" id="orange" type="radio" value="orange" name="bg-color">
+                    <label class="design__green-color" for="green"></label>
+                    <input class="js-green-input" id="green" type="radio" value="green" name="bg-color">
                 </div>
             </div> 
-            <div class="photo">
-                <p>Sube una foto</p>
+            <div class="design__photo-section">
+                <p class="design__text">Sube una foto</p>
+                <img class="design__photo" src="/public/user.png" alt="profile-photo">
+                <button class="design__photo-button">Sube tu foto</button>
             </div>
         </fieldset>
     </div>
