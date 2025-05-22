@@ -1,1 +1,42 @@
 @use "../core/variables" as vars;
+
+.preview{
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        color: vars.$main_blue;
+
+    }
+    &__photo {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+    }
+
+    &__data {
+        background-color: vars.$white;
+        margin: 10px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+        box-shadow: vars.$card-boxshadow;
+    }
+
+    &__aboutme {
+        padding: 0 10px;
+    }
+
+    &__aboutme div{
+        width: 100%;
+        background-color: vars.$white;
+        border-radius: 20px;
+        display: flex;
+        padding: 10px;
+        field-sizing: content;
+        box-shadow: vars.$card-boxshadow;
+    }
+}

@@ -343,6 +343,7 @@ transform: scale(1.2);
         box-shadow: 2px 2px 4px vars.$grey, -2px -2px 4px vars.$light-grey;
         background-color: vars.$white;
         color: vars.$main_blue;
+        field-sizing: content;
         
     }
 
