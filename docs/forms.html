@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Application Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512- ...sha512..." crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+  <link rel="stylesheet" href="./assets/main-ce4012ae.css">
+</head>
+<body>
+    <header class="header">
+    <div class="header__logo-container">
+        <img class="header__logo" src="./logo.webp" alt="logo"></img>
+     </div>
+      <div class="header__logo-name">
+            <div>My Application</div>
+            <div>Card</div>
+        </div>
+</header>
+    <main>
+        <form class="form-main" action="https://dev.adalab.es/api/form" method="POST">
+    
+<section class="design">
+    <div class="title">
+        <p>Diseña</p>
+        <span>
+            <i class="fa-solid fa-circle-plus"></i>
+        </span>
+    </div>
+    <div class="collapsed">
+        <fieldset class="design__fieldset"> 
+            <div class="design__color-section">
+                <p class="design__text">Elige un color</p> 
+                <div class="design__inputs">
+                    <label class="design__grey-color" for="grey"></label>
+                    <input class="js-grey-input" id="grey" type="radio" value="grey" name="bg-color">
+                    <label class="design__orange-color" for="orange"></label>
+                    <input class="js-orange-input" id="orange" type="radio" value="orange" name="bg-color">
+                    <label class="design__green-color" for="green"></label>
+                    <input class="js-green-input" id="green" type="radio" value="green" name="bg-color">
+                </div>
+            </div> 
+            <div class="design__photo-section">
+                <p class="design__text">Sube una foto</p>
+                <div class="">
+                    <img class="design__photo" src="./user.png" alt="profile-photo">
+                    <button class="design__photo-button">Subir</button>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</section>
+
+
+
+    <section class="fill">
+    <div class="title">
+        <p>Rellena</p>
+        <span>
+            <i class="fa-solid fa-circle-plus"></i>
+        </span>
+    </div>
+    <div class="collapsed">
+        <fieldset class="fill__fieldset">
+            <legend class="fill__legend">Datos Personales</legend>
+                <label for="name"></label>
+                <input class="fill__input" id="name" type="text" name="personal-data" placeholder="Nombre y Apellidos">
+                <label for="city"></label>
+                <input class="fill__input" id="city" type="text" name="personal-data" placeholder="Ciudad">
+                <label for="languages"></label>
+                <input class="fill__input" id="languages" type="text" name="personal-data" placeholder="Idiomas">
+                <label for="email"></label>
+                <input class="fill__input" id="email" type="email" name="personal-data" placeholder="Email">
+            <legend class="fill__legend">Sobre mi</legend>
+                <label for="about-me"></label>
+                <textarea class="fill__textarea" id="about-me" name="about-me" maxlength="500" placeholder="Sobre mí" rows="5" cols="33"></textarea>
+                <label for="training"></label>
+                <input class="fill__input" id="training" type="text" name="about-me" placeholder="Formación">
+                <label for="soft-skills"></label>
+                <input class="fill__input" id="soft-skills" type="text" name="about-me" placeholder="Soft Skills">
+                <label for="technologies"></label>
+                <input class="fill__input" id="technologies" type="text" name="about-me" placeholder="Stack Tecnológico">    
+                <label for="linkedin"></label>
+                <input class="fill__input" id="linkedin" type="text" name="about-me" placeholder="LinkedIn">   
+            <legend class="fill__legend">Situación actual y Motivación al puesto</legend>
+                <label for="about-me"></label>
+                <textarea class="fill__textarea" id="about-me" name="about-me" maxlength="500" placeholder="Situación actual y Motivación al puesto" rows="5" cols="33"></textarea>
+        </fieldset>
+    </div>
+</section>
+    <section class="share">
+     <div class="title">
+        <p>Comparte</p>
+        <span>
+            <i class="fa-solid fa-circle-plus"></i>
+        </span>
+    </div>
+    <div class="collapsed">
+        <fieldset class="share__fieldset">
+            <button class="share__button" href="../card.html">Crear Tarjeta
+            </button>
+            <div class="share__section collapsed">
+                <p class="share__text">¡Tu tarjeta se ha creada!</p>
+                <a class="share__link">Link</a>
+                <a class="" href="">
+                    <div class="share__whatsapp">
+                        <img src="./" alt="Icono de Whatsapp"/>
+                    </div>
+                </a>
+            </div>
+            
+        </fieldset>
+    </div>
+</section>
+</form>
+    </main>
+    <footer class="footer">
+    <div class="footer__copy">
+        <p>© 2025 My Application Card. All Rights Reserved. By using this website, you agree to the use of cookies.</p>
+        <p>This website has been developed by <a class="footer-links" href="https://github.com/LauraMartinezPerez" target="_blank" rel="noopener noreferrer">Laura Martinez.</a></p>
+        <p><a class="footer-links" href="/" target="_blank" rel="noopener noreferrer">Cookies & Privacy Policy</a></p>
+    </div>
+</footer>
+
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
