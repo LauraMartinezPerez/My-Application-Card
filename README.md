@@ -17,8 +17,8 @@ Aplicación web para crear y compartir tarjetas currículum interactivas, ideale
 
 - HTML5
 - CSS3 + Sass
-- JavaScript (vanilla)
+- JavaScript
 
-## 📌 Cómo usar
+
 
 
