@@ -2,6 +2,8 @@
 
 .preview{
 
+    margin: 20px 0;
+
     &__profile {
         display: flex;
         align-items: center;
@@ -15,8 +17,9 @@
         margin-left: 10px;
     }
 
-    &__data {
+    &__personal-data {
         background-color: vars.$white;
+        color: vars.$dark-grey;
         margin: 10px;
         border-radius: 20px;
         display: flex;
@@ -26,17 +29,38 @@
         box-shadow: vars.$card-boxshadow;
     }
 
-    &__aboutme {
-        padding: 0 10px;
-    }
+    &__cv-data {
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       margin: 10px;
 
-    &__aboutme div{
+       &__full {
         width: 100%;
         background-color: vars.$white;
+        color: vars.$dark-grey;
         border-radius: 20px;
         display: flex;
         padding: 10px;
         field-sizing: content;
         box-shadow: vars.$card-boxshadow;
+       }
+
+        &__half {
+        width: 50%;
+        background-color: vars.$white;
+        color: vars.$dark-grey;
+        border-radius: 20px;
+        display: flex;
+        padding: 10px;
+        field-sizing: content;
+        box-shadow: vars.$card-boxshadow;
+        }
+
     }
+}
+
+.fa-brands {
+    font-size: 40px;
+    color: vars.$main_blue;
 }

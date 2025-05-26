@@ -18,10 +18,10 @@ form.form-main {
     display: none;
 }   */
 
-input[type="radio"] {
+/* input[type="radio"] {
   opacity: 0;
   position: absolute;
-}
+} */
 
 .title {
     color: vars.$main_blue;
@@ -82,14 +82,19 @@ input[type="radio"] {
         &__text {
         font-size: 15px;
         color: vars.$main_blue;
-    }
+        }
 
         &__inputs {
         display: flex;
         align-items: center;
         gap: 40px;
-    }
-        &__grey-color {
+        }
+
+        &__input {
+        opacity: 0;
+        position: absolute;
+        }
+/*         &__grey-color {
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -122,7 +127,37 @@ input[type="radio"] {
         }
             &__green-color:hover {
             transform: scale(1.2);            
+            } */
+        &__color {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
+            transition: transform 0.1s ease;
+
+            &:hover {
+            transform: scale(1.2);
             }
+
+            &--grey {
+            background-color: vars.$grey;
+            }
+
+            &--orange {
+            background-color: vars.$orange;
+            }
+
+            &--green {
+            background-color: vars.$green;
+            }
+        }
+
+        // Estilos cuando el input está seleccionado
+        &__input:checked + &__color {
+            box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
+            transform: scale(1.2);
+        }
 
         &__photo-section {
         display: flex;
@@ -182,6 +217,12 @@ input[type="radio"] {
             }
 
 }
+/* input[type="radio"]:checked + label.design__grey-color {
+  box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
+  transform: scale(1.2);  
+  // Puedes agregar más estilos aquí según tus necesidades
+} */
+
     
 //tablet version
     @media (min-width: 768px) {
@@ -215,7 +256,13 @@ input[type="radio"] {
         padding-right: 10px;
         }
 
-        &__grey-color {
+        &__color {
+            width: 50px;
+            height: 50px;
+        }
+
+
+/*         &__grey-color {
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -248,7 +295,7 @@ input[type="radio"] {
         }
             &__green-color:hover {
             transform: scale(1.2);            
-            }
+            } */
 
         &__photo-section {
             display: flex;
@@ -307,7 +354,6 @@ transform: scale(1.2);
         font-size: 12px;
         color: vars.$main_blue;
         margin-top: 20px;
-        background-color: vars.$light-grey;
         display: flex;
         align-items: center;
         gap: 1rem; 
@@ -349,8 +395,8 @@ transform: scale(1.2);
 
     .fill__input::placeholder,
     .fill__textarea::placeholder {
-    color: vars.$grey; // O el color que prefieras
-    opacity: 1; // Para asegurar que el color se vea claramente
+    color: vars.$grey; 
+    opacity: 1; 
     }
 
     //tablet version
