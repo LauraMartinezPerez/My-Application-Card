@@ -1,5 +1,10 @@
 @use "../core/variables" as vars;
+@use "../core/mixins" as mixins;
 
+.fa-brands {
+    font-size: 40px;
+    color: vars.$main_blue;
+}
 .preview{
 
     margin: 20px 0;
@@ -33,9 +38,9 @@
        display: flex;
        align-items: center;
        gap: 10px;
-       margin: 10px;
+       margin: 5px;
 
-       &__full {
+       &--full {
         width: 100%;
         background-color: vars.$white;
         color: vars.$dark-grey;
@@ -46,7 +51,7 @@
         box-shadow: vars.$card-boxshadow;
        }
 
-        &__half {
+        &--half {
         width: 50%;
         background-color: vars.$white;
         color: vars.$dark-grey;
@@ -60,7 +65,39 @@
     }
 }
 
-.fa-brands {
-    font-size: 40px;
-    color: vars.$main_blue;
+
+
+//TABLET VERSION
+@media (min-width: 768px) {
+
+    .preview {
+        &__photo {
+        width: 180px;
+        height: 180px;
+        }
+
+        &__personal-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 180px;
+        }
+
+        &__cv-data {
+        margin: 15px;
+
+            &--full {
+            padding: 15px 10px;
+            }
+
+            &--half {
+            padding: 15px 10px;
+            }
+        }
+    }
 }
+
+//COMPUTER VERSION
+    @media (min-width: 1024px) {
+        
+    }

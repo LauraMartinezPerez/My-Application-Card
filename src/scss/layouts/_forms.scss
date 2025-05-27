@@ -1,4 +1,5 @@
 @use "../core/variables" as vars;
+@use "../core/mixins" as mixins;
 
 
 form.form-main {
@@ -18,10 +19,9 @@ form.form-main {
     display: none;
 }   */
 
-/* input[type="radio"] {
-  opacity: 0;
-  position: absolute;
-} */
+.prueba {
+  @include mixins.forms-button(120px, 18px);
+}
 
 .title {
     color: vars.$main_blue;
@@ -94,40 +94,7 @@ form.form-main {
         opacity: 0;
         position: absolute;
         }
-/*         &__grey-color {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: vars.$grey;
-        cursor: pointer;
-        box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-    }
-            &__grey-color:hover {
-            transform: scale(1.2);     
-            }
-        &__orange-color {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: vars.$orange;
-            cursor: pointer;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-        }
-            &__orange-color:hover {
-            transform: scale(1.2);
-            }
 
-        &__green-color {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: vars.$green;
-            cursor: pointer;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-        }
-            &__green-color:hover {
-            transform: scale(1.2);            
-            } */
         &__color {
             width: 30px;
             height: 30px;
@@ -153,7 +120,7 @@ form.form-main {
             }
         }
 
-        // Estilos cuando el input está seleccionado
+        // Estilos cuando el input color está seleccionado
         &__input:checked + &__color {
             box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
             transform: scale(1.2);
@@ -198,33 +165,13 @@ form.form-main {
             box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
             margin-right: 20px;
         }
-
         &__photo-button {
-            background-color: vars.$light-grey;
-            border-radius: 10px;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-            /* padding: 0px 10px; */
-            width: 80px;
-            padding: 10px;
-            font-size: 15px;
-            color: vars.$dark-grey;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }    
-            &__photo-button:active {
-                box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
-            }
-
+            @include mixins.forms-button;
+        }
 }
-/* input[type="radio"]:checked + label.design__grey-color {
-  box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
-  transform: scale(1.2);  
-  // Puedes agregar más estilos aquí según tus necesidades
-} */
 
     
-//tablet version
+//TABLET VERSION
     @media (min-width: 768px) {
     .title {
     color: vars.$main_blue;
@@ -261,42 +208,6 @@ form.form-main {
             height: 50px;
         }
 
-
-/*         &__grey-color {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: vars.$grey;
-        cursor: pointer;
-        box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-        }
-            &__grey-color:hover {
-            transform: scale(1.2);     
-            }
-        &__orange-color {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: vars.$orange;
-            cursor: pointer;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-        }
-            &__orange-color:hover {
-            transform: scale(1.2);
-            }
-
-        &__green-color {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: vars.$green;
-            cursor: pointer;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-        }
-            &__green-color:hover {
-            transform: scale(1.2);            
-            } */
-
         &__photo-section {
             display: flex;
             justify-content: space-between;
@@ -313,24 +224,19 @@ form.form-main {
         }
 
         &__photo-button {
-            width: 100px;
-            font-size: 20px;
+            @include mixins.forms-button(100px, 20px);
         }
-            &__photo-button:active {
-                box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
-            }
     }
 }
 
+//COMPUTER VERSION
     @media (min-width: 1024px) {
         
     }
 
+    
 
-.design-pressed-color {
-box-shadow: inset 3px 3px 5px vars.$grey, inset -3px -3px 5px vars.$white;
-transform: scale(1.2); 
-}
+
 
 
 
@@ -427,22 +333,10 @@ transform: scale(1.2);
         gap: 20px;
     }
 
-    &__button {
-            background-color: vars.$light-grey;
-            border-radius: 10px;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-            /* padding: 0px 10px; */
-            width: 50%;
-            padding: 5px;
-            font-size: 18px;
-            color: vars.$dark-grey;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }    
-            &__button:active {
-                box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
-            }
+   &__button {
+            @include mixins.forms-button(50%, 18px);
+        }
+            
 
         &__section {
             display: flex;

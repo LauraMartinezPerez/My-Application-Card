@@ -1,0 +1,48 @@
+@use 'variables' as vars;
+
+@mixin forms-button($width: 80px, $font-size: 15px, $background-color: vars.$light-grey) {
+    width: $width;
+    font-size: $font-size;
+    background-color: $background-color;
+    border-radius: 10px;
+    padding: 10px;
+    color: vars.$dark-grey;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
+
+     &:active {
+    box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
+    }
+}
+
+
+@mixin link-style ($font-size: 2rem){
+  position: relative;
+  border: 0;
+  outline: none;
+  background: none;
+  color: vars.$grey;
+  text-transform: uppercase;
+  font-family: vars.$font-title;
+  font-size: $font-size;
+  letter-spacing: 3px;
+  font-weight: 500;
+  cursor: pointer;
+
+  .hover-link {
+    position: absolute;
+    content: '';
+    color: vars.$orange;
+    width: 0%;
+    inset: 0;
+    overflow: hidden;
+    border-right: 6px solid vars.$orange;
+    transition: width 0.4s ease;
+    }
+    &:hover .hover-link {
+    width: 100%;
+    filter: drop-shadow(0 0 23px vars.$orange);
+    }
+}

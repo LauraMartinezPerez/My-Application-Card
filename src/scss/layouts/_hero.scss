@@ -1,4 +1,5 @@
 @use "../core/variables" as vars;
+@use "../core/mixins" as mixins;
 
 .hero {
   background: linear-gradient(to right, vars.$main_blue, #010e29);
@@ -73,32 +74,7 @@
   align-items: center;
   margin-top: 100px;
 }
+
 .startLink {
-    position: relative;
-    border: 0;
-    outline: none;
-    background: none;
-    color: vars.$grey;
-    text-transform: uppercase;
-    font-family: vars.$font-title;
-    font-size: 2rem;
-    letter-spacing: 3px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.hover-link {
-    position: absolute;
-    content: '';
-    color: vars.$orange;
-    width: 0%;
-    inset: 0;
-    overflow: hidden;
-    border-right: 6px solid vars.$orange;
-    transition: width 0.4s ease;
-}
-
-.startLink:hover .hover-link {
-    width: 100%;
-    filter: drop-shadow(0 0 23px vars.$orange);
+  @include mixins.link-style(2rem);
 }

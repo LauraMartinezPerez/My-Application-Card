@@ -1,5 +1,6 @@
 @use "core/reset";
 @use "core/variables" as vars;
+@use "core/mixins";
 @use "layouts/header";
 @use "layouts/hero";
 @use "layouts/forms";
