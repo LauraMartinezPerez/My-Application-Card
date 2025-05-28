@@ -1,11 +1,46 @@
 @use "../core/variables" as vars;
 @use "../core/mixins" as mixins;
 
+/* .card-main {
+    background-color: vars.$grey;
+    display: flex;
+    flex-direction: column; 
+    width: 90vw;
+    border-radius: 10px;
+    font-family: vars.$font-main;
+    margin: 10px auto;
+} */
+
+
+.back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.backLink {
+    @include mixins.link-style(1.5rem); 
+}
+
+
+
 .fa-brands {
     font-size: 40px;
     color: vars.$main_blue;
+    margin-left: 5px;
 }
+
 .preview{
+/*     background-color: vars.$grey;
+    display: flex;
+    flex-direction: column; 
+    width: 90vw;
+    border-radius: 10px;
+    font-family: vars.$font-main;
+    margin: 10px auto;
+    font-size: 16px;
+    padding: 20px 0; */
 
     margin: 20px 0;
 
@@ -35,12 +70,12 @@
     }
 
     &__cv-data {
-       display: flex;
-       align-items: center;
-       gap: 10px;
-       margin: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 5px;
 
-       &--full {
+        &--full {
         width: 100%;
         background-color: vars.$white;
         color: vars.$dark-grey;
@@ -49,7 +84,7 @@
         padding: 10px;
         field-sizing: content;
         box-shadow: vars.$card-boxshadow;
-       }
+        }
 
         &--half {
         width: 50%;
@@ -70,7 +105,16 @@
 //TABLET VERSION
 @media (min-width: 768px) {
 
+    .fa-brands {
+    font-size: 60px;
+    color: vars.$main_blue;
+    margin-left: 5px;
+}
+
     .preview {
+
+        font-size: 20px;
+
         &__photo {
         width: 180px;
         height: 180px;
@@ -99,5 +143,7 @@
 
 //COMPUTER VERSION
     @media (min-width: 1024px) {
-        
+        .preview {
+            width: 45vw;
+        }
     }

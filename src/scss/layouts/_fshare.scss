@@ -1,0 +1,55 @@
+@use "../core/variables" as vars;
+@use "../core/mixins" as mixins;
+
+.share {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px vars.$grey, -5px -5px 10px vars.$white;
+    padding: 10px 10px;
+    margin-top: 20px;
+
+    &__fieldset {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+   &__button {
+            @include mixins.forms-button(50%, 18px);
+        }
+            
+
+        &__section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__text {
+            font-family: vars.$font-title;
+            font-size: 20px;
+            color: vars.$main_blue;
+        }
+
+        &__link {
+            color: vars.$orange;
+        }
+
+}
+
+    //tablet version
+@media (min-width: 768px) {
+
+    .share {
+        
+        &__text, &__link {
+            font-size: 30px;
+        }
+        &__button {
+            @include mixins.forms-button(50%, 30px);
+        }
+    }
+}

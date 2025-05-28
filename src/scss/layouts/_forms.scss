@@ -1,8 +1,14 @@
 @use "../core/variables" as vars;
 @use "../core/mixins" as mixins;
 
+.form {
 
-form.form-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+
+    &__form-main {
     background-color: vars.$light-grey;
     display: flex;
     flex-direction: column; 
@@ -12,346 +18,40 @@ form.form-main {
     padding: 20px;
     font-family: vars.$font-main;
     margin: 10px auto;
-    
+    }
+
+    &__card-main {
+    background-color: vars.$grey;
+    display: flex;
+    flex-direction: column; 
+    width: 90vw;
+    border-radius: 10px;
+    font-family: vars.$font-main;
+    margin: 10px auto;
+
+    }
+
 }
+
+//COMPUTER VERSION
+@media (min-width: 1024px) {
+    .form {
+    flex-direction: row;
+    align-items: flex-start;
+
+        &__form-main {
+        width: 50vw;
+        }
+
+        &__card-main {
+        width: 45vw;
+        }
+    }
+}
+
 
 /* .collapsed {
     display: none;
 }   */
 
-.prueba {
-  @include mixins.forms-button(120px, 18px);
-}
 
-.title {
-    color: vars.$main_blue;
-    height: 30px;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-    
-} 
-
-.fa-solid {
-    font-size: 20px;
-}
-
-.design {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px vars.$grey, -5px -5px 10px vars.$white;
-    padding: 10px 10px;
-
-    &__fieldset {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-       
-        &__color-section {
-        display: flex;
-        justify-content: space-between;
-        border-radius: 10px;
-        padding-top: 20px;
-        font-size: 15px;
-        color: vars.$main_blue;
-        position: relative;
-        border: solid 2px transparent;
-        }
-
-            &__color-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 100%;
-            left: 0;
-            width: 100%;
-            margin-bottom: -2px;
-            background-color: transparent;
-            background-image: linear-gradient(
-                to left,
-                transparent,
-                vars.$grey 25%,
-                vars.$main_blue 50% ,
-                transparent
-                );
-            }
-
-        &__text {
-        font-size: 15px;
-        color: vars.$main_blue;
-        }
-
-        &__inputs {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        }
-
-        &__input {
-        opacity: 0;
-        position: absolute;
-        }
-
-        &__color {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-            transition: transform 0.1s ease;
-
-            &:hover {
-            transform: scale(1.2);
-            }
-
-            &--grey {
-            background-color: vars.$grey;
-            }
-
-            &--orange {
-            background-color: vars.$orange;
-            }
-
-            &--green {
-            background-color: vars.$green;
-            }
-        }
-
-        // Estilos cuando el input color está seleccionado
-        &__input:checked + &__color {
-            box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
-            transform: scale(1.2);
-        }
-
-        &__photo-section {
-        display: flex;
-        justify-content: space-between;
-        border-radius: 10px;
-        padding-top: 20px;
-        font-size: 15px;
-        color: vars.$main_blue;
-        position: relative;
-        border: solid 2px transparent;
-        }
-
-            &__photo-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 100%;
-            left: 0;
-            width: 100%;
-            margin-bottom: -2px;
-            background-color: transparent;
-            background-image: linear-gradient(
-                to left,
-                transparent,
-                vars.$grey 25%,
-                vars.$main_blue 50% ,
-                transparent
-                );
-            }
-
-        &__photo {
-            width: 58px;
-            height: 58px;
-            border-radius: 10px;
-            font-size: 12px;
-            color: vars.$dark-grey;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-            margin-right: 20px;
-        }
-        &__photo-button {
-            @include mixins.forms-button;
-        }
-}
-
-    
-//TABLET VERSION
-    @media (min-width: 768px) {
-    .title {
-    color: vars.$main_blue;
-    height: 40px;
-    font-size: 30px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-    }  
-
-.fa-solid {
-    font-size: 30px;
-}
-
-    .design {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px vars.$grey, -10px -10px 20px vars.$white;
-    padding: 10px 10px;
-
-        &__text {
-        font-size: 22px;
-        }
-
-        &__inputs {
-        display: flex;
-        align-items: center;
-        gap: 80px;
-        padding-right: 10px;
-        }
-
-        &__color {
-            width: 50px;
-            height: 50px;
-        }
-
-        &__photo-section {
-            display: flex;
-            justify-content: space-between;
-            padding-right: 30px;
-        }
-
-         &__photo {
-            width: 80px;
-            height: 80px;
-            border-radius: 10px;
-            color: #6d7582;
-            box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-            margin-right: 30px;
-        }
-
-        &__photo-button {
-            @include mixins.forms-button(100px, 20px);
-        }
-    }
-}
-
-//COMPUTER VERSION
-    @media (min-width: 1024px) {
-        
-    }
-
-    
-
-
-
-
-
-//FILL FORM
-
-.fill {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px vars.$grey, -5px -5px 10px vars.$white;
-    padding: 10px 10px;
-    margin-top: 20px;
-
-    &__fieldset {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    &__legend {
-        font-family: vars.$font-title;
-        font-size: 12px;
-        color: vars.$main_blue;
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        gap: 1rem; 
-        text-transform: uppercase;
-
-        &::after {
-            content: '';
-            flex-grow: 1;
-            height: 1px;
-            background-color: vars.$main_blue;
-        }
-    }
-
-    &__input {
-        padding: 8px;
-        font-size: 15px;
-        color: vars.$main_blue;
-        border: none;
-        outline: none;
-        margin-bottom: 5px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 4px vars.$grey, -2px -2px 4px vars.$light-grey;
-        background-color: vars.$white;
-    }
-
-    &__textarea {
-         padding: 8px;
-        font-size: 15px;
-        border: none;
-        outline: none;
-        margin-bottom: 5px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 4px vars.$grey, -2px -2px 4px vars.$light-grey;
-        background-color: vars.$white;
-        color: vars.$main_blue;
-        field-sizing: content;
-        
-    }
-
-    .fill__input::placeholder,
-    .fill__textarea::placeholder {
-    color: vars.$grey; 
-    opacity: 1; 
-    }
-
-    //tablet version
-    @media (min-width: 768px) {
-
-    }
-    @media (min-width: 1024px) {
-        
-    }
-}
-
-
-
-//SHARE FORM
-.share {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px vars.$grey, -5px -5px 10px vars.$white;
-    padding: 10px 10px;
-    margin-top: 20px;
-
-    &__fieldset {
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-   &__button {
-            @include mixins.forms-button(50%, 18px);
-        }
-            
-
-        &__section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &__text {
-            font-family: vars.$font-title;
-            font-size: 20px;
-            color: vars.$main_blue;
-        }
-
-        &__link {
-            color: vars.$orange;
-        }
-
-}
