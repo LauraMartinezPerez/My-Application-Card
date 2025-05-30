@@ -1,6 +1,10 @@
 @use "../core/variables" as vars;
 @use "../core/mixins" as mixins;
 
+.fa-whatsapp, .fa-twitter {
+    font-size: 30px;
+}
+
 .share {
     width: 100%;
     border-radius: 10px;
@@ -17,26 +21,61 @@
         gap: 20px;
     }
 
-   &__button {
+    &__button {
             @include mixins.forms-button(50%, 18px);
         }
             
+    &__whatsappBtn {
+    width: 250px;
+    font-size: 15px;
+    background-color: vars.$light-grey;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    color:#075E54;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
 
-        &__section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    &:active {
+        box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
         }
+    }
 
-        &__text {
-            font-family: vars.$font-title;
-            font-size: 20px;
-            color: vars.$main_blue;
-        }
+    &__twitterBtn {
+    width: 250px;
+    font-size: 15px;
+    background-color: vars.$light-grey;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    color:  #008AD8;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
 
-        &__link {
-            color: vars.$orange;
+    &:active {
+        box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
         }
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text {
+        font-family: vars.$font-title;
+        font-size: 20px;
+        color: vars.$main_blue;
+    }
+
+    &__link {
+        color: vars.$orange;
+    }
 
 }
 
