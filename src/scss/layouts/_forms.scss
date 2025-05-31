@@ -19,6 +19,16 @@
     font-family: vars.$font-main;
     margin: 10px auto;
     }
+    
+    &__reset {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    &__reset-btn {
+        @include mixins.forms-button(50%, 18px, vars.$main_blue, vars.$white);
+    }
 
     &__card-main {
     background-color: vars.$grey;
@@ -34,6 +44,15 @@
 }
 
 //COMPUTER VERSION
+@media (min-width: 768px) {
+    .form {
+        &__reset-btn {
+        @include mixins.forms-button(30%, 25px, vars.$main_blue, vars.$white);
+    }
+    }
+}
+
+//COMPUTER VERSION
 @media (min-width: 1024px) {
     .form {
     flex-direction: row;
@@ -42,6 +61,10 @@
         &__form-main {
         width: 50vw;
         }
+
+         &__reset-btn {
+        @include mixins.forms-button(50%, 20px, vars.$main_blue, vars.$white);
+    }
 
         &__card-main {
         width: 45vw;

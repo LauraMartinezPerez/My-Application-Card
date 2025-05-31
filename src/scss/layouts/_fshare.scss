@@ -88,7 +88,16 @@
             font-size: 30px;
         }
         &__button {
-            @include mixins.forms-button(50%, 30px);
+            @include mixins.forms-button(50%, 25px);
+        }
+
+        &__twitterBtn {
+            width: 350px;
+            font-size: 25px;
+        }
+        &__whatsappBtn {
+            width: 350px;
+            font-size: 25px;
         }
     }
 }

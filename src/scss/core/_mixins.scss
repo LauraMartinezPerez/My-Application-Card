@@ -1,20 +1,47 @@
 @use 'variables' as vars;
 
-@mixin forms-button($width: 80px, $font-size: 15px, $background-color: vars.$light-grey) {
-    width: $width;
-    font-size: $font-size;
-    background-color: $background-color;
-    border-radius: 10px;
-    padding: 10px;
-    color: vars.$dark-grey;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/*  @mixin forms-button($width: 80px, $font-size: 15px, $background-color: vars.$light-grey, $color: vars.$dark-grey) {
+  width: $width;
+  font-size: $font-size;
+  background-color: $background-color;
+  border-radius: 10px;
+  padding: 10px;
+  color: $color;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
     box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
 
      &:active {
     box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
     }
+} */
+
+@mixin forms-button($width: 80px, $font-size: 15px, $background-color: vars.$light-grey, $color: vars.$dark-grey) {
+  width: $width;
+  font-size: $font-size;
+  background-color: $background-color;
+  border-radius: 10px;
+  padding: 10px;
+  color: $color;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  @if $background-color == vars.$main-blue {
+    color: vars.$white;
+    box-shadow: 3px 3px 6px vars.$dark-grey, -3px -3px 6px vars.$white;
+  } @else {
+    box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
+  }
+
+  &:active {
+    @if $background-color == vars.$main-blue {
+      box-shadow: inset 3px 3px 6px rgb(7, 0, 74), inset -3px -3px 6px rgb(53, 74, 100);
+    } @else {
+      box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
+    }
+  }
 }
 
 
