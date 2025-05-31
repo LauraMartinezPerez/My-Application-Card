@@ -12,12 +12,7 @@
 } */
 
 
-.back-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-}
+
 
 .backLink {
     @include mixins.link-style(1.5rem); 
