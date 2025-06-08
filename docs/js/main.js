@@ -1,2 +1,2 @@
-const c=document.querySelectorAll(".nav__item");function i(){c.forEach(t=>t.classList.remove("active")),this.classList.add("active"),this.classList.add("active")}c.forEach(t=>t.addEventListener("click",i));
+const t=document.querySelectorAll(".nav__item");function c(){t.forEach(e=>e.classList.remove("active")),this.classList.add("active")}t.forEach(e=>{e.addEventListener("mouseenter",c)});
 //# sourceMappingURL=main.js.map
