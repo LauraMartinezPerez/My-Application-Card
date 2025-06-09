@@ -1,240 +1,4 @@
-/* 
-@use "../core/variables" as vars;
-@use "../core/mixins" as mixins;
 
-.fa-whatsapp, .fa-twitter, .fa-instagram, .fa-linkedin-in {
-    font-size: 30px;
-    font-weight: bold;  
-}
-
-.nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.nav {
-    position: relative;
-    width: 300px;
-    height: 70px;    
-    background-color: vars.$light-grey; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &__icon {
-        position: relative;
-        display: block;
-        line-height: 75px;
-        font-size: 25px;
-        text-align: center;
-        color: vars.$main_blue;
-        transition: all 0.3s ease;
-    }
-
-    &__list {
-        display: flex;
-        width: 320px;
-        padding: 0;
-    }
-
-    &__item {
-        position: relative;
-        width: 70px;
-        height: 70px;
-        z-index: 1;
-    }
-
-    &__item.active .nav__icon {
-        transform: translateY(-35px);
-    }
-
-    &__link {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        color: vars.$main_blue;
-    }
-
-    &__indicator {
-        position: absolute;
-        top: -50%;
-        width: 70px;
-        height: 70px;
-        background-color: vars.$orange;
-        box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
-        box-sizing: border-box;
-        border-radius: 50%;
-        border: 6px solid vars.$light-grey;
-        transition: 0.5s;
-        opacity: 0;
-    }
-
-    &__indicator::before, &__indicator::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        width: 20px;
-        height: 20px;
-        background-color: transparent;
-    }
-
-    &__indicator::before {
-        left: -22px;
-        box-shadow: 1px -10px 0 0 vars.$light-grey;
-        border-top-left-radius: 20px;
-    }
-
-    &__indicator::after {
-        right: -22px;
-        box-shadow: -1px -10px 0 0 vars.$light-grey;
-        border-top-left-radius: 20px;
-    }
-
-    &__item.active ~ .nav__indicator {
-        --x: 0;
-        opacity: 1;
-        transform: translateX(var(--x));
-    }
-
-    &__item:nth-child(2).active ~ .nav__indicator {
-        --x: 70px;
-    }
-    &__item:nth-child(3).active ~ .nav__indicator {
-        --x: 140px;
-    }
-    &__item:nth-child(4).active ~ .nav__indicator {
-        --x: 210px;
-    }
-}
-
-.share {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px vars.$grey, -5px -5px 10px vars.$white;
-    padding: 10px 10px;
-    margin-top: 20px;
-
-    &__fieldset {
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    &__button {
-        @include mixins.forms-button(50%, 18px);
-    }
-
-    &__section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__text {
-        font-family: vars.$font-title;
-        font-size: 20px;
-        color: vars.$main_blue;
-    }
-
-    &__link {
-        color: vars.$orange;
-    }
-}
-
-//tablet version
-@media (min-width: 768px) {
-
-    .fa-whatsapp, .fa-twitter, .fa-instagram, .fa-linkedin-in {
-        font-size: 35px;
-        font-weight: bold;  
-    }
-
-    .nav {
-        width: 500px;
-
-        &__list {
-            gap: 70px;
-        }
-
-        &__indicator {
-            top: -60%;
-            width: 80px;
-            height: 80px;
-        }
-        &__item.active ~ .nav__indicator {
-            --x: -24px;
-            opacity: 1;
-            transform: translateX(var(--x));
-        }
-
-        &__item:nth-child(2).active ~ .nav__indicator {
-            --x: 79px;
-        }
-        &__item:nth-child(3).active ~ .nav__indicator {
-            --x: 182px;
-        }
-        &__item:nth-child(4).active ~ .nav__indicator {
-            --x: 282px;
-        }
-    }
-
-    .share {
-        
-        &__text, &__link {
-            font-size: 30px;
-        }
-        &__button {
-            @include mixins.forms-button(50%, 25px);
-        }
-    }
-}
-
-//computer version
-@media (min-width: 1024px) {
-
-    .nav {
-        width: 400px;
-
-        &__list {
-            gap: 50px;
-        }
-
-        &__indicator {
-            top: -60%;
-            width: 80px;
-            height: 80px;
-        }
-        &__item.active ~ .nav__indicator {
-            --x: -18px;
-            opacity: 1;
-            transform: translateX(var(--x));
-        }
-
-        &__item:nth-child(2).active ~ .nav__indicator {
-            --x: 75px;
-        }
-        &__item:nth-child(3).active ~ .nav__indicator {
-            --x: 167px;
-        }
-        &__item:nth-child(4).active ~ .nav__indicator {
-            --x: 259px;
-        }
-    }
-}
- */
 @use "../core/variables" as vars;
 @use "../core/mixins" as mixins;
 
@@ -336,13 +100,39 @@
     margin-top: 20px;
 
     &__fieldset {
-        margin: 20px auto;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 20px;
+        border-radius: 10px;
+        padding-top: 20px;
+        font-size: 15px;
+        color: vars.$main_blue;
+        position: relative;
+        border: solid 2px transparent;
     }
+
+        &__fieldset::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        margin-bottom: -2px;
+        background-color: transparent;
+        background-image: linear-gradient(
+            to left,
+            transparent,
+            vars.$grey 25%,
+            vars.$main_blue 50% ,
+            transparent
+            );
+        }
+
 
     &__button {
         @include mixins.forms-button(50%, 18px);
