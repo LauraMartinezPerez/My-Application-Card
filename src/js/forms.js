@@ -38,8 +38,8 @@ for (const field of fields) {
 
 // Funcion Reset
 resetBtn.addEventListener("click", () => {
-    const input = document.querySelector(`.js_${field}`);
-    const preview = document.querySelector (`.js_preview_${field}`);
+    const input = document.querySelector(`.js_${fields}`);
+    const preview = document.querySelector (`.js_preview_${fields}`);
     input.value = "";
     preview.innerHTML = "";
 });
