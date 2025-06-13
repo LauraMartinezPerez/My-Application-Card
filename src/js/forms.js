@@ -9,9 +9,9 @@ const trainingInput = document.querySelector(".js_training");
 const skillsInput = document.querySelector(".js_skills");
 const technologiesInput = document.querySelector(".js_technologies");
 const linkedinInput = document.querySelector(".js_linkedin");
-const motivationInput = document.querySelector(".js_motivation");    
+const motivationInput = document.querySelector(".js_motivation");     */
 
-const previewName = document.querySelector(".js_preview_name");
+const previewName = document.querySelector(".js_preview_profileName");
 const previewCity = document.querySelector(".js_preview_city");
 const previewLanguages = document.querySelector(".js_preview_languages");
 const previewEmail = document.querySelector(".js_preview_email");
@@ -21,7 +21,7 @@ const previewSkills = document.querySelector(".js_preview_skills");
 const previewTechnologies = document.querySelector(".js_preview_technologies");
 const previewLinkedin = document.querySelector(".js_preview_linkedin");
 const previewMotivation = document.querySelector(".js_preview_motivation");
- */
+ 
 
 const fields = ["profileName", "city", "languages", "email", "aboutMe", "training", "skills", "technologies", "linkedin", "motivation"];
 const resetBtn = document.querySelector(".js_reset");
@@ -31,15 +31,22 @@ for (const field of fields) {
     const input = document.querySelector(`.js_${field}`);
     const preview = document.querySelector (`.js_preview_${field}`);
     input.addEventListener("input", () => {
-        console.log(input.value);
         preview.innerHTML = input.value;
     });
 } 
 
 // Funcion Reset
 resetBtn.addEventListener("click", () => {
-    const input = document.querySelector(`.js_${fields}`);
-    const preview = document.querySelector (`.js_preview_${fields}`);
-    input.value = "";
-    preview.innerHTML = "";
+
+previewName.innerHTML = "nombre";
+previewCity.innerHTML = "ciudad";
+previewLanguages.innerHTML = "idiomas";
+previewEmail.innerHTML = "email";
+previewAboutMe.innerHTML = "Sobre mi";
+previewTraining.innerHTML = "Formación";
+previewSkills.innerHTML = "Soft skills";
+previewTechnologies.innerHTML = "Stack tecnológico";
+previewLinkedin.innerHTML = "Enlace linkedIn";
+previewMotivation.innerHTML = "Situación actual y motivación al puesto";
+
 });
