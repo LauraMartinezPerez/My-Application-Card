@@ -29,16 +29,6 @@
 }
 
 .preview{
-/*     background-color: vars.$grey;
-    display: flex;
-    flex-direction: column; 
-    width: 90vw;
-    border-radius: 10px;
-    font-family: vars.$font-main;
-    margin: 10px auto;
-    font-size: 16px;
-    padding: 20px 0; */
-
     margin: 20px 0;
 
     &__profile {
@@ -164,6 +154,7 @@
         &__photo {
         width: 180px;
         height: 180px;
+        
         }
 
         &__personal-data {

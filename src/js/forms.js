@@ -21,7 +21,7 @@ const previewSkills = document.querySelector(".js_preview_skills");
 const previewTechnologies = document.querySelector(".js_preview_technologies");
 const previewLinkedin = document.querySelector(".js_preview_linkedin");
 const previewMotivation = document.querySelector(".js_preview_motivation");
- 
+const bgReset = document.querySelector(".js-bg-reset"); 
 
 const fields = ["profileName", "city", "languages", "email", "aboutMe", "training", "skills", "technologies", "linkedin", "motivation"];
 const resetBtn = document.querySelector(".js_reset");
@@ -38,6 +38,10 @@ for (const field of fields) {
 // Funcion Reset
 resetBtn.addEventListener("click", () => {
 
+bgReset.classList.remove("bg-grey");
+bgReset.classList.remove("bg-orange");
+bgReset.classList.remove("bg-green");
+bgReset.classList.add("bg-neutro");
 previewName.innerHTML = "nombre";
 previewCity.innerHTML = "ciudad";
 previewLanguages.innerHTML = "idiomas";

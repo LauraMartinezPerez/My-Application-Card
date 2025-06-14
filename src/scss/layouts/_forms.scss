@@ -38,9 +38,27 @@
     border-radius: 10px;
     font-family: vars.$font-main;
     margin: 10px auto;
-
     }
 
+}
+
+.bg-grey {
+background-image: url("/bg-grey.webp");
+background-size: cover;
+background-position: center;
+}
+.bg-orange {
+background-image: url("/bg-orange.webp");
+background-size: cover;
+background-position: center;
+}
+.bg-green {
+background-image: url("/bg-green.webp");
+background-size: cover;
+background-position: center;
+}
+.bg-neutro {
+    background-color: vars.$grey;
 }
 
 //COMPUTER VERSION
