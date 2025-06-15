@@ -27,7 +27,7 @@ const fields = ["profileName", "city", "languages", "email", "aboutMe", "trainin
 const resetBtn = document.querySelector(".js_reset");
 
 //Funcion para escuchar los inputs y mostrar en el preview
-for (const field of fields) {
+ for (const field of fields) {
     const input = document.querySelector(`.js_${field}`);
     const preview = document.querySelector (`.js_preview_${field}`);
     input.addEventListener("input", () => {
@@ -35,22 +35,25 @@ for (const field of fields) {
     });
 } 
 
+
+
+
+
+
 // Funcion Reset
 resetBtn.addEventListener("click", () => {
-
-bgReset.classList.remove("bg-grey");
-bgReset.classList.remove("bg-orange");
-bgReset.classList.remove("bg-green");
-bgReset.classList.add("bg-neutro");
-previewName.innerHTML = "nombre";
-previewCity.innerHTML = "ciudad";
-previewLanguages.innerHTML = "idiomas";
-previewEmail.innerHTML = "email";
-previewAboutMe.innerHTML = "Sobre mi";
-previewTraining.innerHTML = "Formación";
-previewSkills.innerHTML = "Soft skills";
-previewTechnologies.innerHTML = "Stack tecnológico";
-previewLinkedin.innerHTML = "Enlace linkedIn";
-previewMotivation.innerHTML = "Situación actual y motivación al puesto";
-
+    bgReset.classList.remove("bg-grey");
+    bgReset.classList.remove("bg-orange");
+    bgReset.classList.remove("bg-green");
+    bgReset.classList.add("bg-neutro");
+    previewName.innerHTML = "nombre";
+    previewCity.innerHTML = "ciudad";
+    previewLanguages.innerHTML = "idiomas";
+    previewEmail.innerHTML = "email";
+    previewAboutMe.innerHTML = "Sobre mi";
+    previewTraining.innerHTML = "Formación";
+    previewSkills.innerHTML = "Soft skills";
+    previewTechnologies.innerHTML = "Stack tecnológico";
+    previewLinkedin.innerHTML = "Enlace linkedIn";
+    previewMotivation.innerHTML = "Situación actual y motivación al puesto";
 });
