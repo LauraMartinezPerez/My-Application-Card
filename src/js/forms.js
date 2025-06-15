@@ -26,14 +26,43 @@ const bgReset = document.querySelector(".js-bg-reset");
 const fields = ["profileName", "city", "languages", "email", "aboutMe", "training", "skills", "technologies", "linkedin", "motivation"];
 const resetBtn = document.querySelector(".js_reset");
 
+const formFill = document.querySelector(".js-formFill");
+
 //Funcion para escuchar los inputs y mostrar en el preview
-for (const field of fields) {
+/* for (const field of fields) {
     const input = document.querySelector(`.js_${field}`);
     const preview = document.querySelector (`.js_preview_${field}`);
     input.addEventListener("input", () => {
         preview.innerHTML = input.value;
     });
-} 
+}  */
+
+formFill.addEventListener("input", (event) => {
+    const inputValue = event.target.value;
+
+    if (event.target.id === "name") {
+        previewName.innerHTML = inputValue;
+    } else if (event.target.id === "city") {
+        previewCity.innerHTML = inputValue;
+    } else if (event.target.id === "languages") {
+        previewLanguages.innerHTML = inputValue;
+    } else if (event.target.id === "email") {
+        previewEmail.innerHTML = inputValue;
+    } else if (event.target.id === "about-me") {
+        previewAboutMe.innerHTML = inputValue;
+    } else if (event.target.id === "training") {
+        previewTraining.innerHTML = inputValue;
+    } else if (event.target.id === "soft-skills") {
+        previewSkills.innerHTML = inputValue;
+    } else if (event.target.id === "technologies") {
+        previewTechnologies.innerHTML = inputValue;
+    } else if (event.target.id === "linkedin") {
+        previewLinkedin.innerHTML = inputValue;
+    } else if (event.target.id === "motivation") {
+        previewMotivation.innerHTML = inputValue;
+    }
+});
+
 
 // Funcion Reset
 resetBtn.addEventListener("click", () => {
