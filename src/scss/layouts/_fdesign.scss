@@ -1,6 +1,7 @@
 @use "../core/variables" as vars;
 @use "../core/mixins" as mixins;
 
+
 .title {
     color: vars.$main_blue;
     height: 30px;
@@ -20,6 +21,10 @@
     border-radius: 10px;
     box-shadow: 5px 5px 10px vars.$grey, -5px -5px 10px vars.$white;
     padding: 10px 10px;
+
+    &__hiddenField {
+        display: none;
+    }
 
     &__fieldset {
         display: flex;
@@ -135,6 +140,9 @@
         }
 
     &__photo {
+        /* background-image: url("/user.png");
+        background-size: cover;
+        background-position: center; */
         width: 58px;
         height: 58px;
         border-radius: 10px;
@@ -192,7 +200,6 @@
             justify-content: space-between;
             padding-right: 30px;
         }
-
         &__photo {
             width: 80px;
             height: 80px;

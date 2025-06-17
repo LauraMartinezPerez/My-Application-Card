@@ -1,26 +1,11 @@
 @use 'variables' as vars;
 
-/*  @mixin forms-button($width: 80px, $font-size: 15px, $background-color: vars.$light-grey, $color: vars.$dark-grey) {
-  width: $width;
-  font-size: $font-size;
-  background-color: $background-color;
-  border-radius: 10px;
-  padding: 10px;
-  color: $color;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-    box-shadow: 3px 3px 6px vars.$grey, -3px -3px 6px vars.$white;
-
-     &:active {
-    box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;
-    }
-} */
 
 @mixin forms-button($width: 80px, $font-size: 15px, $background-color: vars.$light-grey, $color: vars.$dark-grey) {
   width: $width;
   font-size: $font-size;
   background-color: $background-color;
+  text-align: center;
   border-radius: 10px;
   padding: 10px;
   color: $color;

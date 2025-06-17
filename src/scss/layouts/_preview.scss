@@ -1,18 +1,6 @@
 @use "../core/variables" as vars;
 @use "../core/mixins" as mixins;
 
-/* .card-main {
-    background-color: vars.$grey;
-    display: flex;
-    flex-direction: column; 
-    width: 90vw;
-    border-radius: 10px;
-    font-family: vars.$font-main;
-    margin: 10px auto;
-} */
-
-
-
 
 .backLink {
     @include mixins.link-style(1.5rem); 
@@ -38,9 +26,12 @@
 
     }
     &__photo {
-        border-radius: 50%;
+/*         background-image: url("/user.png");
+        background-size: cover;
+        background-position: center; */
+        aspect-ratio: 1;
         width: 100px;
-        height: 100px;
+        border-radius: 50%;
         margin-left: 10px;
     }
 
@@ -92,47 +83,47 @@
         justify-content: center;
     }
     &__reset-btn {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  background-color: vars.$light-grey;
-  color: vars.$dark-grey;
-  cursor: pointer;
-  transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: vars.$light-grey;
+        color: vars.$dark-grey;
+        cursor: pointer;
+        transition: all 0.3s ease;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
-    background-color: vars.$white;
-    border-radius: 10px;
-    z-index: -1;
-  }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 90%;
+            background-color: vars.$white;
+            border-radius: 10px;
+            z-index: -1;
+        }
 
-  &:hover {
-    background-color: vars.$white;
-    color: vars.$dark-grey;
+        &:hover {
+            background-color: vars.$white;
+            color: vars.$dark-grey;
 
-    &::before {
-      background-color: vars.$light-grey;
+            &::before {
+            background-color: vars.$light-grey;
+            }
+        }
+
+        &:active {
+            background-color: vars.$light-grey;
+            color: vars.$dark-grey;
+
+            &::before {
+            background-color: vars.$white;
+            }
+        }
     }
-  }
-
-  &:active {
-    background-color: vars.$light-grey;
-    color: vars.$dark-grey;
-
-    &::before {
-      background-color: vars.$white;
-    }
-  }
-}
 }
 
 
@@ -152,9 +143,10 @@
         font-size: 20px;
 
         &__photo {
+        aspect-ratio: 1;
         width: 180px;
-        height: 180px;
-        
+        border-radius: 50%;
+        margin-left: 30px;
         }
 
         &__personal-data {
@@ -162,6 +154,7 @@
         flex-direction: column;
         justify-content: space-around;
         height: 180px;
+        margin-right: 30px;
         }
 
         &__cv-data {
