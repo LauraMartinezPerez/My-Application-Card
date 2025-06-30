@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512- ...sha512..." crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" crossorigin href="./assets/main-BP_rtv1m.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-DQOfxWsH.css">
 </head>
 <body>
     <header class="header">
@@ -37,26 +37,33 @@
             <div class="design__color-section">
                 <p class="design__text">Elige un color</p> 
                 <div class="design__inputs">
-                    <input type="radio" id="grey" name="bg-color" value="grey" class="design__input design__input--grey" />
+                    <input type="radio" id="grey" name="bg-color" value="grey" class="design__input design__input--grey js-color-grey"/>
                     <label for="grey" class="design__color design__color--grey"></label>
 
-                    <input type="radio" id="orange" name="bg-color" value="orange" class="design__input design__input--orange" />
+                    <input type="radio" id="orange" name="bg-color" value="orange" class="design__input design__input--orange js-color-orange"/>
                     <label for="orange" class="design__color design__color--orange"></label>
 
-                    <input type="radio" id="green" name="bg-color" value="green" class="design__input design__input--green" />
+                    <input type="radio" id="green" name="bg-color" value="green" class="design__input design__input--green js-color-green"/>
                     <label for="green" class="design__color design__color--green"></label>
                 </div>
             </div> 
             <div class="design__photo-section">
                 <p class="design__text">Sube una foto</p>
                 <div class="">
-                    <img class="design__photo" src="./user.png" alt="profile-photo">
-                    <button class="design__photo-button">Subir</button>
+                    <img class="design__photo js__profile-preview" src="./user.png" alt="profile-photo">
+                    <label class="design__photo-button" for="img-selector">Subir</label>
+                    <input type="file" name="" id="img-selector" class="design__hiddenField  js__profile-upload-btn">
                 </div>
             </div>
         </fieldset>
     </div>
 </section>
+
+<!--   <div class="profile">
+    <div class="profile__image js__profile-image" style="background-image:url"></div>
+    <div class="profile__preview js__profile-preview"></div>
+
+  </div> -->
 
 
 
@@ -68,7 +75,7 @@
         </span>
     </div>
     <div class="collapsed js_fill_collapsable">
-        <fieldset class="fill__fieldset">
+        <fieldset class="fill__fieldset js-formFill">
             <legend class="fill__legend">Datos Personales</legend>
                 <label for="name"></label>
                 <input class="fill__input js_profileName" id="name" type="text" name="personal-data" placeholder="Nombre y Apellidos">
@@ -77,7 +84,7 @@
                 <label for="languages"></label>
                 <input class="fill__input js_languages" id="languages" type="text" name="personal-data" placeholder="Idiomas">
                 <label for="email"></label>
-                <input class="fill__input js_email" id="email" type="email" name="personal-data" placeholder="Email">
+                <input class="fill__input js_email" id="email" type="email" name="personal-data" placeholder="Email" required>
             <legend class="fill__legend">Sobre mi</legend>
                 <label for="about-me"></label>
                 <textarea class="fill__textarea js_aboutMe" id="about-me" name="about-me" maxlength="500" placeholder="Sobre mí" rows="5" cols="33"></textarea>
@@ -90,8 +97,8 @@
                 <label for="linkedin"></label>
                 <input class="fill__input js_linkedin" id="linkedin" type="text" name="about-me" placeholder="LinkedIn">   
             <legend class="fill__legend">Situación actual y Motivación al puesto</legend>
-                <label for="about-me"></label>
-                <textarea class="fill__textarea js_motivation" id="about-me" name="about-me" maxlength="500" placeholder="Situación actual y Motivación al puesto" rows="5" cols="33"></textarea>
+                <label for="motivation"></label>
+                <textarea class="fill__textarea js_motivation" id="motivation" name="motivation" maxlength="500" placeholder="Situación actual y Motivación al puesto" rows="5" cols="33"></textarea>
         </fieldset>
     </div>
 </section>
@@ -155,7 +162,7 @@
                 </div>
             </form>
             
-            <section class="form__card-main">
+            <section class="form__card-main js-bg-preview js-bg-reset">
                 <header class="header">
     <div class="header__logo-container">
         <img class="header__logo" src="./logo.webp" alt="logo"></img>
@@ -167,7 +174,7 @@
 </header>
                 <div class="preview">
     <div class="preview__profile">
-        <img class="preview__photo" src="./user.png" alt="profile-photo">
+        <img class="preview__photo js__profile-image" src="./user.png" alt="profile-photo">
         <div class="preview__personal-data">
             <div class="js_preview_profileName">nombre</div>
             <div class="js_preview_city">ciudad</div>
