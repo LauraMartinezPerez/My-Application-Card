@@ -95,6 +95,11 @@ const handleInput = (event) => {
 formFill.addEventListener("input", handleInput);
 
 
+
+
+
+
+
 // Funcion Reset
 
 const photoTemplate = "./user.png";
