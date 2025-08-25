@@ -89,6 +89,7 @@ const handleInput = (event) => {
         previewMotivation.innerHTML = inputValue;
         formData.field10 = inputValue;
     } 
+    console.log(formData);
 };
 
 

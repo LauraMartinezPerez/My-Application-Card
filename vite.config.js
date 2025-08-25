@@ -30,7 +30,7 @@ const inputFilesList = {
   'main': 'src/js/main.js',
 }
 
-export default defineConfig({
+/* export default defineConfig({
   base: "./",
   root: "src",
   publicDir: "../public",
@@ -63,10 +63,46 @@ export default defineConfig({
   plugins: [
     injectHTML(),
     ViteImageOptimizer({
-      /* pass your config */
+      
     }),
     concat({
       input: ['main.js']
     }),
+  ],
+}); */
+
+export default defineConfig({
+  base: "./",
+  root: "src",
+  publicDir: "../public",
+
+  build: {
+    minify: "esbuild",
+    outDir: "../docs",
+    sourcemap: "inline",  // ✅ sólo aquí
+    emptyOutDir: true,
+    rollupOptions: {
+      input: inputFilesList,
+      output: {
+        entryFileNames: ({ name }) => {
+          if (name === 'main') return 'js/main.js';
+          return "[name].js";
+        },
+        // quitamos rollupOptions.output.sourcemap
+      },
+    },
+  },
+
+  server: {
+    open: "/index.html",
+    watch: {
+      usePolling: true
+    }
+  },
+
+  plugins: [
+    injectHTML(),
+    ViteImageOptimizer({ /* tu config */ }),
+    concat({ input: ['main.js'] }),
   ],
 });
