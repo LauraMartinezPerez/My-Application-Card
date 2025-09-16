@@ -11,12 +11,11 @@ const fillCollapsable = document.querySelector(".js_fill_collapsable");
 const shareCollapsable = document.querySelector(".js_share_collapsable");
 
 const collapsableHeaders = document.querySelectorAll(".js_collapsable_header");
-
+console.log("Principal", collapsableHeaders);
 
 
 const handleClick = (event) => {
     
-
     if (event.currentTarget.classList.contains("js_design_title")) {
         designCollapsable.classList.toggle("collapsed");
         fillCollapsable.classList.add("collapsed");
@@ -33,9 +32,10 @@ const handleClick = (event) => {
         shareCollapsable.classList.toggle("collapsed");
     } 
 
-    }
+}
 
 for (const collapsableHeader of collapsableHeaders) {
+    console.log(collapsableHeader);
     collapsableHeader.addEventListener("click", handleClick);
 }
 
