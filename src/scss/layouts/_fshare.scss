@@ -2,6 +2,10 @@
 @use "../core/variables" as vars;
 @use "../core/mixins" as mixins;
 
+.hidden {
+    display: none;
+}
+
 .fa-whatsapp, .fa-twitter, .fa-instagram, .fa-linkedin-in {
     font-size: 30px;
     font-weight: bold;  

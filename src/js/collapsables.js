@@ -11,7 +11,6 @@ const fillCollapsable = document.querySelector(".js_fill_collapsable");
 const shareCollapsable = document.querySelector(".js_share_collapsable");
 
 const collapsableHeaders = document.querySelectorAll(".js_collapsable_header");
-console.log("Principal", collapsableHeaders);
 
 
 const handleClick = (event) => {
@@ -35,7 +34,6 @@ const handleClick = (event) => {
 }
 
 for (const collapsableHeader of collapsableHeaders) {
-    console.log(collapsableHeader);
     collapsableHeader.addEventListener("click", handleClick);
 }
 
