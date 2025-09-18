@@ -140,11 +140,9 @@
         }
 
     &__photo {
-        /* background-image: url("/user.png");
-        background-size: cover;
-        background-position: center; */
         width: 58px;
         height: 58px;
+        object-fit: cover;
         border-radius: 10px;
         font-size: 12px;
         color: vars.$dark-grey;
