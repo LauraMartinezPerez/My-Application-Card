@@ -8,7 +8,6 @@ Recoger id para poner en el enlace que se muestra a la usuaria.
 Mostrar enlace a la usuaria. */
 
 const createCardButton = document.querySelector(".js-createCard-btn");
-const phrase = document.querySelector(".js-phrase");
 const linkCard = document.querySelector(".js-linkCard");
  
 const handleCreateCard = (ev) => {
@@ -22,29 +21,15 @@ const handleCreateCard = (ev) => {
         .then(response => response.json())
         .then(data => {
             console.log("esto es data de POST", data);
+            
             const idCard = data.infoID;
             console.log("esto es idCard", idCard);
+            
             linkCard.classList.remove("hidden");
             linkCard.href = `./card.html?id=${idCard}`;
         })
+        .catch(err => console.error("Error al crear tarjeta:", err));
 }
 
 createCardButton.addEventListener("click", handleCreateCard);
 
-/*     const phraseValue = phrase.value;
-    fetch("http://localhost:3000/cards", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            phrase: phraseValue,
-        }),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            phrase.classList.add("hidden");
-            createCardButton.classList.add("hidden");
-            linkCard.classList.remove("hidden");
-            linkCard.href = `http://localhost:3000/cards/${data.id}`;
-        }); */

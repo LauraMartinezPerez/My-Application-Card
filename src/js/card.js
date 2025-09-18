@@ -33,9 +33,9 @@ fetch(`https://dev.adalab.es/api/info/${id}`)
         emailCard.innerText = targetData.field4;
         trainingCard.innerText = targetData.field5;
         skillsCard.innerText = targetData.field6;
-        motivationCard.innerText = targetData.field7;
-        technologiesCard.innerText = targetData.field8;
-        linkedinCard.href = targetData.field9;
+        technologiesCard.innerText = targetData.field7;
+        linkedinCard.innerText = targetData.field8;
+        motivationCard.innerText = targetData.field9;
         photoCard.src = targetData.photo;
 
         if (targetData.field1 === 1) {

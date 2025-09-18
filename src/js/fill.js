@@ -3,9 +3,7 @@
 
 const previewName = document.querySelector(".js_preview_profileName");
 const previewCity = document.querySelector(".js_preview_city");
-const previewLanguages = document.querySelector(".js_preview_languages");
 const previewEmail = document.querySelector(".js_preview_email");
-const previewAboutMe = document.querySelector(".js_preview_aboutMe");
 const previewTraining = document.querySelector(".js_preview_training");
 const previewSkills = document.querySelector(".js_preview_skills");
 const previewTechnologies = document.querySelector(".js_preview_technologies");
@@ -13,7 +11,7 @@ const previewLinkedin = document.querySelector(".js_preview_linkedin");
 const previewMotivation = document.querySelector(".js_preview_motivation");
 
 
-const fields = ["profileName", "city", "languages", "email", "aboutMe", "training", "skills", "technologies", "linkedin", "motivation"];
+const fields = ["profileName", "city", "email", "training", "skills", "technologies", "linkedin", "motivation"];
 
 
 const formFill = document.querySelector(".js-formFill");
@@ -29,29 +27,21 @@ const formData = {
     field7: "",
     field8: "",
     field9: "",
-/*     field10: "", */
     photo: ""
 }
 
 const handleInput = (event) => {
     const inputValue = event.target.value;
-    console.log(inputValue);
     if (event.target.id === "name") {
         previewName.innerHTML = inputValue;
         formData.field2 = inputValue;
     } else if (event.target.id === "city") {
         previewCity.innerHTML = inputValue;
         formData.field3 = inputValue;
-    } /* else if (event.target.id === "languages") {
-        previewLanguages.innerHTML = inputValue;
-        formData.field3 = inputValue;
-    } */ else if (event.target.id === "email") {
+    }  else if (event.target.id === "email") {
         previewEmail.innerHTML = inputValue;
         formData.field4 = inputValue;
-    } /* else if (event.target.id === "about-me") {
-        previewAboutMe.innerHTML = inputValue;
-        formData.field5 = inputValue;
-    } */ else if (event.target.id === "training") {
+    }  else if (event.target.id === "training") {
         previewTraining.innerHTML = inputValue;
         formData.field5 = inputValue;
     } else if (event.target.id === "soft-skills") {
