@@ -25,7 +25,21 @@ previewMotivation.innerHTML = "Situación actual y motivación al puesto";
 profilePreviewImg.src = photoTemplate;
 userProfilePhoto.src = photoTemplate;
 
+  // Reset formData a valores iniciales
+  formData.field1 = 0;
+  formData.field2 = "";
+  formData.field3 = "";
+  formData.field4 = "";
+  formData.field5 = "";
+  formData.field6 = "";
+  formData.field7 = "";
+  formData.field8 = "";
+  formData.field9 = "";
+  formData.photo = "./user.png";
 
+  //Borrar cardId de la URL para generar un nuevo ID al crear una nueva tarjeta
+  window.history.replaceState(null, null, "./forms.html");
+  console.log(formData);
 };
 
 // Evento
