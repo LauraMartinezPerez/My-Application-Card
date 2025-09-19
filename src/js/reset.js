@@ -25,8 +25,7 @@ previewMotivation.innerHTML = "Situación actual y motivación al puesto";
 profilePreviewImg.src = photoTemplate;
 userProfilePhoto.src = photoTemplate;
 
-  //Borrar cardId de la URL para generar un nuevo ID al crear una nueva tarjeta
-  window.history.replaceState(null, null, "./forms.html");
+
 };
 
 // Evento

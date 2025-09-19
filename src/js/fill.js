@@ -1,6 +1,7 @@
+
 "use strict";
 
-/* --- SELECTORES --- */
+/*  SELECTORES  */
 const previewName = document.querySelector(".js_preview_profileName");
 const previewCity = document.querySelector(".js_preview_city");
 const previewEmail = document.querySelector(".js_preview_email");
