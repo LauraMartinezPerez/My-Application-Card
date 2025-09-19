@@ -1,11 +1,5 @@
 "use strict";
 
-/*
-Recoger el id de la tarjeta del url de la pagina
-Hacer una peticion al servidor (para obtener los datos de la tarjeta) id de la tarjeta
-    - guardo los datos de la tarjerta (en el localStorage)
-    - introduzco esos datos en el html de la tarjeta
-*/
 const photoCard = document.querySelector(".js__profile-preview");
 const nameCard = document.querySelector(".js_preview_profileName");
 const cityCard = document.querySelector(".js_preview_city");
@@ -17,41 +11,54 @@ const technologiesCard = document.querySelector(".js_preview_technologies");
 const linkedinCard = document.querySelector(".js_preview_linkedin");
 const bgPreview = document.querySelector(".js-bg-preview");
 
+const backLink = document.querySelector(".js-backLink");
+
 
 //Obtener el id de la url
 const urlParam = new URLSearchParams(window.location.search);
 const id = urlParam.get("id");
 console.log(id);
 
-fetch(`https://dev.adalab.es/api/info/${id}`)
+if (id) {
+  /* --- FETCH PARA OBTENER DATOS DE LA TARJETA --- */
+  fetch(`https://dev.adalab.es/api/info/${id}`)
     .then(response => response.json())
     .then(data => {
-        console.log("esto es data de GET",data);
-        const targetData = data.data;
-        nameCard.innerText = targetData.field2;
-        cityCard.innerText = targetData.field3;
-        emailCard.innerText = targetData.field4;
-        trainingCard.innerText = targetData.field5;
-        skillsCard.innerText = targetData.field6;
-        motivationCard.innerText = targetData.field7;
-        technologiesCard.innerText = targetData.field8;
-        linkedinCard.href = targetData.field9;
-        photoCard.src = targetData.photo;
+      const targetData = data.data;
 
-        if (targetData.field1 === 1) {
-            bgPreview.classList.add("bg-grey");
-            bgPreview.classList.remove("bg-orange");
-            bgPreview.classList.remove("bg-green");
+      // Rellenar preview
+      nameCard.innerText = targetData.field2;
+      cityCard.innerText = targetData.field3;
+      emailCard.innerText = targetData.field4;
+      trainingCard.innerText = targetData.field5;
+      skillsCard.innerText = targetData.field6;
+      technologiesCard.innerText = targetData.field7;
+      linkedinCard.innerText = targetData.field8;
+      motivationCard.innerText = targetData.field9;
+      photoCard.src = targetData.photo;
 
-        } else if (targetData.field1 === 2) {
-            bgPreview.classList.remove("bg-grey");
-            bgPreview.classList.add("bg-orange");
-            bgPreview.classList.remove("bg-green");
+      // Fondo según field1
+      if (targetData.field1 === 1) {
+        bgPreview.classList.add("bg-grey");
+        bgPreview.classList.remove("bg-orange", "bg-green");
+      } else if (targetData.field1 === 2) {
+        bgPreview.classList.add("bg-orange");
+        bgPreview.classList.remove("bg-grey", "bg-green");
+      } else if (targetData.field1 === 3) {
+        bgPreview.classList.add("bg-green");
+        bgPreview.classList.remove("bg-grey", "bg-orange");
+      }
 
-        } else if (targetData.field1 === 3) {
-            bgPreview.classList.remove("bg-grey");
-            bgPreview.classList.remove("bg-orange");
-            bgPreview.classList.add("bg-green");
-        }
-        
+      // Configurar botón ATRÁS dinámicamente
+      backLink.href = `./forms.html?cardId=${id}`;
     })
+    .catch(err => console.error("Error al recuperar tarjeta:", err));
+} else if (id === null)
+  console.log(id);
+  {
+    
+  // Si no hay id o id null, el botón ATRÁS apunta al formulario sin id
+  backLink.href = "./forms.html";
+}
+
+    

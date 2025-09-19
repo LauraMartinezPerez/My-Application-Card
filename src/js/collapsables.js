@@ -1,8 +1,4 @@
 "use strict";
-/* 
-const collapsableDesign = document.querySelector(".js_design_title");
-const collapsableFill = document.querySelector(".js_fill_title");
-const collapsableShare = document.querySelector(".js_share_title"); */
 
 const designCollapsable = document.querySelector(".js_design_collapsable"); 
 
