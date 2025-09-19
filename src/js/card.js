@@ -53,8 +53,11 @@ if (id) {
       backLink.href = `./forms.html?cardId=${id}`;
     })
     .catch(err => console.error("Error al recuperar tarjeta:", err));
-} else {
-  // Si no hay id, el botón ATRÁS apunta al formulario sin id
+} else if (id === null)
+  console.log(id);
+  {
+    
+  // Si no hay id o id null, el botón ATRÁS apunta al formulario sin id
   backLink.href = "./forms.html";
 }
 
