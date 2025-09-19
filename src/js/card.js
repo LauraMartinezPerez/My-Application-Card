@@ -20,7 +20,7 @@ const id = urlParam.get("id");
 console.log(id);
 
 if (id) {
-  /* --- FETCH PARA OBTENER DATOS DE LA TARJETA --- */
+  /*  FETCH PARA OBTENER DATOS DE LA TARJETA  */
   fetch(`https://dev.adalab.es/api/info/${id}`)
     .then(response => response.json())
     .then(data => {
