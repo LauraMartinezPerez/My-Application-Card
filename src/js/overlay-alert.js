@@ -4,6 +4,17 @@ const overlayAlert = document.querySelector(".js-overlay-alert");
 const overlayClose = document.querySelector(".js-overlay-close");
 const overlayErrorMessage = document.querySelector(".js-overlay-error-message");
 
+const loadingOverlay = document.querySelector(".js-loading-overlay");
+
+//Mostrar Loading Overlay
+const showLoading = () => {
+    loadingOverlay.classList.add("visible");
+};
+
+const hideLoading = () => {
+    loadingOverlay.classList.remove("visible");
+};
+
 //Muestra una alerta personalizada
 const showOverlayError = (message) => {
     overlayErrorMessage.textContent = message;

@@ -10,15 +10,23 @@ const shareIcons = document.querySelector(".js-share-icons");
 // Función manejadora "Crear tarjeta"
 const handleCreateCard = (ev) => {
     ev.preventDefault();
+    showLoading();
+
+    // Simulación de carga de 2 segundos
+    setTimeout(() => {
+        hideLoading();  // Aquí se oculta el overlay
+    }, 8000);
 
     // Validación de formulario: si hay campos vacíos, no continuar
     if (!validateForm()) {
+        hideLoading();
         return;
     } 
 
     // Validación de email usando validator.js
     if (!validator.isEmail(inputEmail.value)) {
         showOverlayError("Por favor, escribe un Email válido"); // Muestra overlay de error si email no es válido
+        hideLoading();
         return; // Detiene la ejecución
     }
 
@@ -40,9 +48,14 @@ const handleCreateCard = (ev) => {
 
             // Mostrar los iconos de compartir
             shareIcons.style.display = "flex";
+            hideLoading();
         })
-        .catch(err => console.error("Error al crear tarjeta:", err)); // Captura y muestra errores
-}
+        .catch(err => {
+            console.error("Error al crear tarjeta:", err); // Captura y muestra errores
+            showOverlayError("Error al cargar las tareas. Por favor, inténtalo de nuevo más tarde.");
+            hideLoading();  
+        });
+    };
 
 // Evento tipo click
 createCardButton.addEventListener("click", handleCreateCard);
