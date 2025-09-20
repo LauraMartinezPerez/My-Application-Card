@@ -2,12 +2,26 @@
 
 const createCardButton = document.querySelector(".js-createCard-btn");
 const linkCard = document.querySelector(".js-linkCard");
+
+const emailInput = document.querySelector("#email");
+
+const isValidEmail = (email) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+};
+
+
  
 const handleCreateCard = (ev) => {
     ev.preventDefault();
 
     if (!validateForm()) {
         return;
+    }
+
+    if (!isValidEmail(emailInput.value)) {
+        showOverlayError("Por favor, escribe un Email válido");
+            return;
     }
 
     fetch("https://dev.adalab.es/api/info/data", {
