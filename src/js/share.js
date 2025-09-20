@@ -5,6 +5,11 @@ const linkCard = document.querySelector(".js-linkCard");
  
 const handleCreateCard = (ev) => {
     ev.preventDefault();
+
+    if (!validateForm()) {
+        return;
+    }
+
     fetch("https://dev.adalab.es/api/info/data", {
         method: "POST",
         body: JSON.stringify(formData),
