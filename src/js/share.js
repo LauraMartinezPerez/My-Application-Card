@@ -3,6 +3,7 @@
 const createCardButton = document.querySelector(".js-createCard-btn");
 const linkCard = document.querySelector(".js-linkCard");
 
+
 const emailInput = document.querySelector("#email");
 
 const isValidEmail = (email) => {
@@ -10,6 +11,9 @@ const isValidEmail = (email) => {
   return regex.test(email);
 };
 
+
+
+const shareIcons = document.querySelector(".js-share-icons");
 
  
 const handleCreateCard = (ev) => {
@@ -37,6 +41,7 @@ const handleCreateCard = (ev) => {
             
             linkCard.classList.remove("hidden");
             linkCard.href = `./card.html?id=${idCard}`;
+            shareIcons.style.display = "flex";
         })
         .catch(err => console.error("Error al crear tarjeta:", err));
 }
