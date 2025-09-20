@@ -5,6 +5,11 @@ const linkCard = document.querySelector(".js-linkCard");
  
 const handleCreateCard = (ev) => {
     ev.preventDefault();
+
+    if (!validateForm()) {
+        return;
+    }
+
     fetch("https://dev.adalab.es/api/info/data", {
         method: "POST",
         body: JSON.stringify(formData),
@@ -22,5 +27,4 @@ const handleCreateCard = (ev) => {
         .catch(err => console.error("Error al crear tarjeta:", err));
 }
 
-createCardButton.addEventListener("click", handleCreateCard);
-
+createCardButton.addEventListener("click", handleCreateCard); 

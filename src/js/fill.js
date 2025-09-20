@@ -1,6 +1,7 @@
+
 "use strict";
 
-/* --- SELECTORES --- */
+/*  SELECTORES  */
 const previewName = document.querySelector(".js_preview_profileName");
 const previewCity = document.querySelector(".js_preview_city");
 const previewEmail = document.querySelector(".js_preview_email");
@@ -23,7 +24,7 @@ const inputTechnologies = document.querySelector(".js_technologies")
 const inputLinkedin = document.querySelector(".js_linkedin")
 const inputMotivation = document.querySelector(".js_motivation")
 
-/* --- DATOS DEL FORMULARIO --- */
+/*  DATOS DEL FORMULARIO  */
 const formData = {
   field1: 0,
   field2: "",
@@ -37,7 +38,7 @@ const formData = {
   photo: "./user.png"
 };
 
-/* --- FUNCION PARA ACTUALIZAR FORMULARIO Y PREVIEW AL ESCRIBIR --- */
+/*  FUNCION PARA ACTUALIZAR FORMULARIO Y PREVIEW AL ESCRIBIR  */
 const handleInput = (event) => {
   const inputValue = event.target.value;
 
@@ -72,7 +73,7 @@ const handleInput = (event) => {
 
 formFill.addEventListener("input", handleInput);
 
-/* --- RECUPERAR DATOS DE TARJETA SI HAY cardId EN LA URL --- */
+/*  RECUPERAR DATOS DE TARJETA SI HAY cardId EN LA URL  */
 const urlParams = new URLSearchParams(window.location.search);
 const cardId = urlParams.get("cardId");
 
