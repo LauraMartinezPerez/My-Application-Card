@@ -1,6 +1,8 @@
 "use strict";
 import "./collapsables.js";
-import "./forms.js";
-import "./bgCardColor.js";
+import "./design.js";
+import "./fill.js";
 import "./get-avatar.js";
+import "./reset.js";
+import "./share.js";
 

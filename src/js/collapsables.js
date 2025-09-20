@@ -1,8 +1,4 @@
 "use strict";
-/* 
-const collapsableDesign = document.querySelector(".js_design_title");
-const collapsableFill = document.querySelector(".js_fill_title");
-const collapsableShare = document.querySelector(".js_share_title"); */
 
 const designCollapsable = document.querySelector(".js_design_collapsable"); 
 
@@ -11,7 +7,6 @@ const fillCollapsable = document.querySelector(".js_fill_collapsable");
 const shareCollapsable = document.querySelector(".js_share_collapsable");
 
 const collapsableHeaders = document.querySelectorAll(".js_collapsable_header");
-console.log("Principal", collapsableHeaders);
 
 
 const handleClick = (event) => {
@@ -35,7 +30,6 @@ const handleClick = (event) => {
 }
 
 for (const collapsableHeader of collapsableHeaders) {
-    console.log(collapsableHeader);
     collapsableHeader.addEventListener("click", handleClick);
 }
 
