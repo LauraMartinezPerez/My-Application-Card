@@ -8,3 +8,23 @@
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
+.form {
+
+    &__form-main {
+    background-color: vars.$light-grey;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    width: 90vw;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: vars.$font-main;
+    margin: 20px auto;
+
+    //COMPUTER VERSION
+    @media (min-width: 1024px) {
+        width: 45vw;
+        }
+    }
+}

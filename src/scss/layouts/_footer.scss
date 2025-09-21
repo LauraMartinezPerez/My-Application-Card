@@ -3,10 +3,8 @@
 .footer {
     color: vars.$white;
     font-family: vars.$font-main;
-    font-size: 10px;
+    font-size: 12px;
     padding: 20px;
-    
-
 
 &__copy {
     display: flex;
@@ -16,10 +14,20 @@
     }
 
   //version tablet-computer
-  @media (min-width: 768px) {
-
-  }
-
+    @media (min-width: 768px) {
+        font-size: 15px;
+    }
+    //version tablet-computer
+    @media (min-width: 1024px) {
+        font-size: 15px;
+        &__copy {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        }
+    }
 };
 
 .footer-links {
