@@ -12,7 +12,7 @@
 }
 
 .nav-container {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
@@ -138,10 +138,6 @@
         }
 
 
-    &__button {
-        @include mixins.forms-button(50%, 18px);
-    }
-
     &__section {
         display: flex;
         flex-direction: column;
@@ -185,9 +181,7 @@
         &__text, &__link {
             font-size: 30px;
         }
-        &__button {
-            @include mixins.forms-button(50%, 25px);
-        }
+        
     }
 }
 

@@ -20,14 +20,19 @@
     margin: 10px auto;
     }
     
-    &__reset {
+    &__buttons {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         margin-top: 20px;
     }
 
     &__reset-btn {
-        @include mixins.forms-button(50%, 18px, vars.$main_blue, vars.$white);
+        @include mixins.forms-button(30%, 18px, vars.$main_blue, vars.$white);
+    }
+
+    &__createCard-btn {
+        @include mixins.forms-button(60%, 20px, vars.$light-grey, vars.$main_blue);
+        font-weight: bold;
     }
 
     &__card-main {
@@ -66,7 +71,11 @@ background-position: center;
     .form {
         &__reset-btn {
         @include mixins.forms-button(30%, 25px, vars.$main_blue, vars.$white);
-    }
+        }
+
+        &__createCard-btn {
+            @include mixins.forms-button(50%, 25px);
+        }
     }
 }
 
