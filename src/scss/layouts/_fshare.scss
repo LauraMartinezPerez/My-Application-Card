@@ -15,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin: 25px auto;
 }
 
 .nav {
@@ -53,7 +53,7 @@
             left: 50%;
             width: 70px;
             height: 70px;
-            background-color: vars.$orange;
+            background-color: vars.$light-grey;
             border-radius: 50%;
             border: 6px solid vars.$light-grey;
             box-shadow: inset 3px 3px 6px vars.$grey, inset -3px -3px 6px vars.$white;

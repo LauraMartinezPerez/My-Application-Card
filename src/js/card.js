@@ -52,25 +52,13 @@ if (id) {
         bgPreview.classList.add("bg-green");
         bgPreview.classList.remove("bg-grey", "bg-orange");
       }
-
       // Configurar botón ATRÁS dinámicamente
       backLink.href = `./forms.html?cardId=${id}`;
-    })
+      })
     .catch(err => console.error("Error al recuperar tarjeta:", err));
-} else if (id === null)
-  console.log(id);
-  {
+    }
+    
   // Si no hay id o id null, el botón ATRÁS apunta al formulario sin id
   backLink.href = "./forms.html";
-}
-
-//Colapsabe share
-function handleCollapsable() {
-    shareCollapsable.classList.toggle("collapsed");
-}
-
-for (const collapsableHeaderShares of collapsableHeaderShare) {
-    collapsableHeaderShares.addEventListener("click", handleCollapsable);
-}
 
 
