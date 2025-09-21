@@ -1,4 +1,6 @@
 "use strict";
+import "./share.js";
+
 // Selecciona elementos del DOM
 const photoCard = document.querySelector(".js__profile-preview");
 const nameCard = document.querySelector(".js_preview_profileName");
