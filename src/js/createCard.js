@@ -4,6 +4,7 @@ import validator from "validator";
 
 //Seleccionar elementos del DOM
 const createCardButton = document.querySelector(".js-createCard-btn");
+const shareSection = document.querySelector(".js-share-section");
 
 //Función manejadora "Crear tarjeta"
 const handleCreateCard = (ev) => {
@@ -39,7 +40,7 @@ const handleCreateCard = (ev) => {
             console.log(data); 
 
             const idCard = data.infoID; // Guarda el ID de la tarjeta recién creada
-
+           
             // Redirigir directamente a la página con el id generado
             window.location.href = `./card.html?id=${idCard}`;
         })
@@ -49,6 +50,10 @@ const handleCreateCard = (ev) => {
             hideLoading();  
         });
     };
-
 // Evento tipo click
 createCardButton.addEventListener("click", handleCreateCard);
+
+// Si hay cardId en la URL, muestra la sección de compartir
+if (cardId) {
+    shareSection.style.display = "flex";
+}

@@ -1,7 +1,5 @@
 "use strict";
-import "./share.js";
 
-// Selecciona elementos del DOM
 const photoCard = document.querySelector(".js__profile-preview");
 const nameCard = document.querySelector(".js_preview_profileName");
 const cityCard = document.querySelector(".js_preview_city");
@@ -12,10 +10,6 @@ const motivationCard = document.querySelector(".js_preview_motivation");
 const technologiesCard = document.querySelector(".js_preview_technologies");
 const linkedinCard = document.querySelector(".js_preview_linkedin");
 const bgPreview = document.querySelector(".js-bg-preview");
-
-const collapsableHeaderShare = document.querySelectorAll(".js_collapsable_header");
-const shareCollapsable = document.querySelector(".js_share_collapsable");
-const shareIcons = document.querySelector(".js-share-icons"); 
 
 const backLink = document.querySelector(".js-backLink");
 
@@ -54,13 +48,17 @@ if (id) {
         bgPreview.classList.add("bg-green");
         bgPreview.classList.remove("bg-grey", "bg-orange");
       }
+
       // Configurar botón ATRÁS dinámicamente
       backLink.href = `./forms.html?cardId=${id}`;
-      })
+    })
     .catch(err => console.error("Error al recuperar tarjeta:", err));
-    }
+} else if (id === null)
+  console.log(id);
+  {
     
   // Si no hay id o id null, el botón ATRÁS apunta al formulario sin id
   backLink.href = "./forms.html";
+}
 
-
+    
