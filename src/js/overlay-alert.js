@@ -33,6 +33,7 @@ const handleCloseOverlay = () => {
 }
 overlayAlert.addEventListener("click", handleCloseOverlay);
 
+
 const validateForm = () => {
     const requiredFields = [
         formData.field2,
