@@ -60,6 +60,9 @@
         padding: 10px;
         field-sizing: content;
         box-shadow: vars.$card-boxshadow;
+        white-space: pre-wrap; // Mantiene saltos de línea del form al dar enter
+        word-wrap: break-word; // Evita que las palabras largas se corten
+        word-break: break-word; // fuerza el corte de palabras si es necesario
         }
 
         &--half {
@@ -71,6 +74,9 @@
         padding: 10px;
         field-sizing: content;
         box-shadow: vars.$card-boxshadow;
+        white-space: pre-wrap; // Mantiene saltos de línea del form al dar enter
+        word-wrap: break-word; // Evita que las palabras largas se corten
+        word-break: break-word; // fuerza el corte de palabras si es necesario 
         }
 
     }

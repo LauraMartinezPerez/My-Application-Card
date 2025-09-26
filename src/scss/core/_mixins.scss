@@ -29,8 +29,7 @@
   }
 }
 
-
-@mixin link-style ($font-size: 2rem){
+@mixin link-style($font-size: 2rem) {
   position: relative;
   border: 0;
   outline: none;
@@ -42,19 +41,27 @@
   letter-spacing: 3px;
   font-weight: 500;
   cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
 
-  .hover-link {
+  &::after {
+    content: attr(data-text); 
     position: absolute;
-    content: '';
-    color: vars.$orange;
+    top: 0;
+    left: 0;
     width: 0%;
-    inset: 0;
+    height: 100%;
+    color: vars.$orange;
+    white-space: nowrap;
     overflow: hidden;
     border-right: 6px solid vars.$orange;
     transition: width 0.4s ease;
-    }
-    &:hover .hover-link {
+  }
+
+  &:hover::after {
     width: 100%;
-    filter: drop-shadow(0 0 23px vars.$orange);
-    }
+    /* filter: text-shadow(0 0 8px vars.$orange); */
+    text-shadow: 0 0 8px vars.$orange;
+  }
 }
+
