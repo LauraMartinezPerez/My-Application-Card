@@ -1,6 +1,13 @@
 @use "../core/variables" as vars;
 @use "../core/mixins" as mixins;
 
+.hiddenOverlay {
+    display: none;
+}
+
+.showOverlay {
+    display: flex;
+}
 
 .overlay-alert {
     position: fixed;
