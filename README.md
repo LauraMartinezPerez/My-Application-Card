@@ -28,7 +28,7 @@ Si quieres ejecutar la aplicación en tu ordenador:
 
 ```bash
 # Clona este repositorio
-git clone <[url-del-repositorio](https://github.com/LauraMartinezPerez/My-Application-Card.git)>
+git clone https://github.com/LauraMartinezPerez/My-Application-Card.git
 
 # Accede a la carpeta
 cd my-application-card
